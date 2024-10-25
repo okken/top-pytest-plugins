@@ -19,7 +19,11 @@ def main():
 
 # These packages are deprecated and should not be used
 # We'll need to update this list as we review the package list
-deprecated_packages = ['pytest-runner']
+deprecated_packages = [
+    'pytest-runner', # deprecated, recommend use tox
+    'pytest-coverage', # not supported, same uthor as pytest-cov, recommend use pytest-cov
+    'pytest-cover', # not supported, same uthor as pytest-cov, recommend use pytest-cov
+    ]
 
 def get_pytest_rows(json_data):
     for row in json_data['rows']:
