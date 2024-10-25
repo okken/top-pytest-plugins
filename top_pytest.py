@@ -1,24 +1,6 @@
 import json
 import httpx
 
-def get_pytest_rows(json_data):
-    for row in json_data['rows']:
-        project = row['project']
-        if 'pytest' in project and 'pytest' != project:
-            yield row
-
-from pprint import pprint
-
-def get_summary(project):
-    try:
-        r = httpx.get(f'https://pypi.org/pypi/{project}/json')
-        assert r.status_code == 200
-        data = r.json()
-        return data['info']['summary']
-
-    except AssertionError:
-        return r.status_code
-
 def main():
     data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages-30-days.min.json'
     r = httpx.get(data_source)
@@ -34,6 +16,28 @@ def main():
         count = row['download_count']
         description = get_summary(project)
         print(f"| {i} | [{project}]({url}) | {count:,} | {description} |")
+
+# These packages are deprecated and should not be used
+# We'll need to update this list as we review the package list
+deprecated_packages = ['pytest-runner']
+
+def get_pytest_rows(json_data):
+    for row in json_data['rows']:
+        project = row['project']
+        if ('pytest' in project and 
+            'pytest' != project and 
+            project not in deprecated_packages):
+            yield row
+
+def get_summary(project):
+    try:
+        r = httpx.get(f'https://pypi.org/pypi/{project}/json')
+        assert r.status_code == 200
+        data = r.json()
+        return data['info'].get('summary', '')
+    except AssertionError:
+        return r.status_code
+
 
 if __name__ == '__main__':
     main()
