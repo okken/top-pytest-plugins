@@ -23,6 +23,7 @@ deprecated_packages = [
     'pytest-runner', # deprecated, recommend use tox
     'pytest-coverage', # not supported, same uthor as pytest-cov, recommend use pytest-cov
     'pytest-cover', # not supported, same uthor as pytest-cov, recommend use pytest-cov
+    'pytest-pythonpath', # This plugin is obsolete as of pytest 7.0.0.
     ]
 
 def get_pytest_rows(json_data):
