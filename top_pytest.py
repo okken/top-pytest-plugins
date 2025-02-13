@@ -1,6 +1,8 @@
 import json
 import httpx
 
+max_count = 200
+
 def main():
     data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages-30-days.min.json'
     r = httpx.get(data_source)
@@ -11,6 +13,8 @@ def main():
     print('| # | Package | Downloads | Summary |')
     print('| -- | -- | -- | --- |')
     for i, row in enumerate(get_pytest_rows(data), start=1):
+        if i > max_count:
+            break
         url = f"https://pypi.org/project/{row['project']}"
         project = row['project']
         count = row['download_count']
@@ -24,6 +28,9 @@ deprecated_packages = [
     'pytest-coverage', # not supported, same uthor as pytest-cov, recommend use pytest-cov
     'pytest-cover', # not supported, same uthor as pytest-cov, recommend use pytest-cov
     'pytest-pythonpath', # This plugin is obsolete as of pytest 7.0.0.
+    'pytest-parallel', # deprecated, recommend use pytest-xdist
+    'pytest-forked', # minimal maintenance. looking for a maintainer
+    'pytest-messenger', # no activity sincd 2022, looks abandoned
     ]
 
 def get_pytest_rows(json_data):
