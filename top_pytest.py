@@ -4,7 +4,7 @@ import httpx
 max_count = 201
 
 def main():
-    data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages-30-days.min.json'
+    data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json'
     r = httpx.get(data_source)
     assert r.status_code == 200
 
