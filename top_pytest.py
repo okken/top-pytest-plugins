@@ -47,7 +47,11 @@ extra_named_packages = [
 notes = {
     'hypothesis': "Includes a small pytest plugin.",
     'pytest-cov': "Test & Code episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
-    'pytest-mock': "Test & Code episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)"
+    'pytest-mock': "Test & Code episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
+    'pytest-md': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-md-report': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-html': "Test & Code episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
+    'pytest-repeat': "Test & Code April Fools episode [Python 3.14 won't repeat with pytest-repeat](https://testandcode.com/episodes/python-3-14-wont-repeat-with-pytest-repeat)",
 }
 
 def get_pytest_rows(json_data):
