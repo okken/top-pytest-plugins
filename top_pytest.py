@@ -1,7 +1,7 @@
 import json
 import httpx
 
-max_count = 201
+max_count = 200
 
 def main():
     data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json'
@@ -46,12 +46,14 @@ extra_named_packages = [
 
 notes = {
     'hypothesis': "Includes a small pytest plugin.",
-    'pytest-cov': "Test & Code episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
-    'pytest-mock': "Test & Code episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
-    'pytest-md': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-md-report': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-html': "Test & Code episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
-    'pytest-repeat': "Test & Code April Fools episode [Python 3.14 won't repeat with pytest-repeat](https://testandcode.com/episodes/python-3-14-wont-repeat-with-pytest-repeat)",
+    'pytest-cov': "episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
+    'pytest-mock': "episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
+    'pytest-md': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-md-report': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-html': "episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
+    'pytest-repeat': "episode [S2:E8: pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
+    'pytest-metadata': "episode [S2:E11: pytest-metadata - provides access to test session metadata](https://testandcode.com/episodes/pytest-metadata)",
+    'pytest-check': "episode [S2:E10: pytest-check - allow multiple failures per test](https://testandcode.com/episodes/pytest-check)",
 }
 
 def get_pytest_rows(json_data):
