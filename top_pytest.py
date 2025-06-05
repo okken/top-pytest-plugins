@@ -32,6 +32,8 @@ deprecated_packages = [
     'pytest-forked', # minimal maintenance. looking for a maintainer
     'pytest-messenger', # no activity sincd 2022, looks abandoned
     'ipytest', # Not a plugin
+    'pytest-wake', # No info on PyPI
+    'pytest-shard', # No info on PyPI
     ]
 
 extra_named_packages = [
