@@ -4,7 +4,7 @@ import httpx
 max_count = 200
 
 def main():
-    data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages-30-days.min.json'
+    data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json'
     r = httpx.get(data_source)
     assert r.status_code == 200
 
@@ -49,15 +49,16 @@ extra_named_packages = [
 
 notes = {
     'hypothesis': "Includes a small pytest plugin.",
-    'pytest-cov': "Test & Code episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
-    'pytest-mock': "Test & Code episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
+    'pytest-cov': "episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
+    'pytest-mock': "episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
+    'pytest-md': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-md-report': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-html': "episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
+    'pytest-repeat': "episode [S2:E8: pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
+    'pytest-metadata': "episode [S2:E11: pytest-metadata - provides access to test session metadata](https://testandcode.com/episodes/pytest-metadata)",
+    'pytest-check': "episode [S2:E10: pytest-check - allow multiple failures per test](https://testandcode.com/episodes/pytest-check)",
     'pytest-json-report': "Seems no longer supported, but leaving here to recommend [pytest-json-report-wip](https://pypi.org/project/pytest-json-report-wip/)",
-    'pytest-subtests': "Test & Code episode [Subtests in Python with unittest and pytest](https://testandcode.com/episodes/111-subtests-in-python-with-unittest-and-pytest-paul-ganssle)",
-    'pytest-md': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-md-report': "Test & Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-html': "Test & Code episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
-    'pytest-repeat': "Test & Code episode [pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
-    #'pytest-check': "Test & Code episode []()",
+    'pytest-subtests': "episode [Subtests in Python with unittest and pytest](https://testandcode.com/episodes/111-subtests-in-python-with-unittest-and-pytest-paul-ganssle)",
 }
 
 def get_pytest_rows(json_data):
