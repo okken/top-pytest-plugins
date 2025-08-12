@@ -54,9 +54,9 @@ notes = {
     'pytest-md': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
     'pytest-md-report': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
     'pytest-html': "episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
-    'pytest-repeat': "episode [S2:E8: pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
-    'pytest-metadata': "episode [S2:E11: pytest-metadata - provides access to test session metadata](https://testandcode.com/episodes/pytest-metadata)",
-    'pytest-check': "episode [S2:E10: pytest-check - allow multiple failures per test](https://testandcode.com/episodes/pytest-check)",
+    'pytest-repeat': "episode [pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
+    'pytest-metadata': "episode [pytest-metadata - provides access to test session metadata](https://testandcode.com/episodes/pytest-metadata)",
+    'pytest-check': "episode [pytest-check - allow multiple failures per test](https://testandcode.com/episodes/pytest-check)",
     'pytest-json-report': "Seems no longer supported, but leaving here to recommend [pytest-json-report-wip](https://pypi.org/project/pytest-json-report-wip/)",
     'pytest-subtests': "episode [Subtests in Python with unittest and pytest](https://testandcode.com/episodes/111-subtests-in-python-with-unittest-and-pytest-paul-ganssle)",
 }
