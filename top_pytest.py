@@ -49,16 +49,17 @@ extra_named_packages = [
 
 notes = {
     'hypothesis': "Includes a small pytest plugin.",
-    'pytest-cov': "episode [pytest-cov : The pytest plugin for measuring coverage](https://testandcode.com/episodes/pytest-cov)",
-    'pytest-mock': "episode [pytest-mock : Mocking in pytest](https://testandcode.com/episodes/pytest-mock)",
-    'pytest-md': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-md-report': "episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://testandcode.com/episodes/markdown-reports-pytest-md-pytest-md-report)",
-    'pytest-html': "episode [pytest-html - a plugin that generates HTML reports for test results](https://testandcode.com/episodes/pytest-html)",
-    'pytest-repeat': "episode [pytest-repeat - works fine on Python 3.14](https://testandcode.com/episodes/pytest-repeat-works-fine-on-python-3-14)",
-    'pytest-metadata': "episode [pytest-metadata - provides access to test session metadata](https://testandcode.com/episodes/pytest-metadata)",
-    'pytest-check': "episode [pytest-check - allow multiple failures per test](https://testandcode.com/episodes/pytest-check)",
+    'pytest-cov': "Test and Code episode [pytest-cov : The pytest plugin for measuring coverage](https://pythontest.com/testandcode/episodes/pytest-cov)",
+    'pytest-mock': "Test and Code episode [pytest-mock : Mocking in pytest](https://pythontest.com/testandcode/episodes/pytest-mock)",
+    'pytest-md': "Test and Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://pythontest.com/testandcode/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-md-report': "Test and Code episode [pytest-md and pytest-md-report: Markdown reports for pytest](https://pythontest.com/testandcode/episodes/markdown-reports-pytest-md-pytest-md-report)",
+    'pytest-html': "Test and Code episode [pytest-html - a plugin that generates HTML reports for test results](https://pythontest.com/testandcode/episodes/pytest-html)",
+    'pytest-repeat': "Test and Code episode [pytest-repeat - works fine on Python 3.14](https://pythontest.com/testandcode/episodes/pytest-repeat-works-fine-on-python-3-14)",
+    'pytest-metadata': "Test and Code episode [pytest-metadata - provides access to test session metadata](https://pythontest.com/testandcode/episodes/pytest-metadata)",
+    'pytest-check': "Test and Code episode [pytest-check - allow multiple failures per test](https://pythontest.com/testandcode/episodes/pytest-check)",
     'pytest-json-report': "Seems no longer supported, but leaving here to recommend [pytest-json-report-wip](https://pypi.org/project/pytest-json-report-wip/)",
-    'pytest-subtests': "episode [Subtests in Python with unittest and pytest](https://testandcode.com/episodes/111-subtests-in-python-with-unittest-and-pytest-paul-ganssle)",
+    'pytest-subtests': "Test and Code episode [Subtests in Python with unittest and pytest](https://pythontest.com/testandcode/episodes/111-subtests-in-python-with-unittest-and-pytest-paul-ganssle)",
+    'pytest-django': "Test and Code episode [pytest-django with Adam Johnson](https://pythontest.com/testandcode/episodes/pytest-django/)",
 }
 
 def get_pytest_rows(json_data):
@@ -82,7 +83,7 @@ def get_summary(project):
             summary = ""
         summary = summary.replace("Pytest", "pytest")
         if project in notes:
-            summary += f" ({notes[project]})"
+            summary += f" <br/>{notes[project]}"
         return summary
     except AssertionError:
         return r.status_code
