@@ -4,9 +4,9 @@ import httpx
 max_count = 200
 
 def main():
-    data_source = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json'
+    data_source = 'https://hugovk.dev/top-pypi-packages/top-pypi-packages.min.json'
     r = httpx.get(data_source)
-    assert r.status_code == 200
+    assert r.status_code == 200, f"Failed to fetch data from {data_source}, status code: {r.status_code}"
 
     data = json.loads(r.text)
     print(f"Data last updated: {data['last_update']} ")
